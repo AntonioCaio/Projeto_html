@@ -1,48 +1,270 @@
+<!DOCTYPE html>
+<html>
 
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <title>Cadastro compras ShoesNet</title>
+    <head>
+        <title>ShoesNet</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h2>Cadastro</h2>
-     
-       
-        <form action="" method="GET">
-            
-            
-            <label>Nome:</label>
-           
-            <input name="nome" type="text"><br>
-            
-            <label>Email:</label>
-            <input name="email" type="email"><br>
-            
-            <label>Nascimento:</label>
-            <input name="nasc" type="date"><br>
-            
-         
-            <label>Cidade:</label>
-            <select name="cidade">
-                <option value="" selected="selected">Selecione uma cidade</option>
-                <option value="1">Paranavaí</option>
-                <option value="2">Alto Paraná</option>
-                <option value="3">Maringá</option>
-            </select>
-            <br>
-            
-            <label>Senha:</label>
-            <input name="senha" type="password"><br>
-            
-            <br>
-           
-            <input value="Enviar" type="submit">
-            <input value="Limpar" type="reset">
-            
-           
-        </form>
-        
-    
 
-</body></html>
+        <script src="js/jquery-3.2.1.js"></script>
+
+        <script src="js/popper.js"></script>
+
+        <script src="js/bootstrap.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+
+        <link rel="stylesheet" href="css/personalizado.css" type="text/css" />    
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            .card{
+                margin-right: 20px;
+                margin-bottom: 20px;
+            }
+
+            .card img{
+                height: 200px;
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col">
+
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="index.html">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            Inicio</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="mulher.html">
+                                        <i class="fa fa-female" aria-hidden="true"></i>
+                                        Mulher<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="homem.html">
+                                        <i class="fa fa-male" aria-hidden="true"></i>
+                                        Homem</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="#">
+                                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                                        Lancamentos</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        Carrinho de Compra
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="cadastro.html">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i>Cadastro</a>
+                                        <a class="dropdown-item" href="Login.html">
+                                            <i class="fa fa-share-square" aria-hidden="true"></i>Conectar em Minha Conta</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa fa-money" aria-hidden="true"></i>Finalizar Compra</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    Pesquisar</button>
+                            </form>
+                        </div>
+                    </nav>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <br/>
+
+        <div class="row">
+
+
+            <div class="col-md-3">
+
+                <div class="list-group">
+                    <a href="homem.html" class="list-group-item list-group-item-action">
+                        Masculino
+                    </a>
+                    <a href="mulher.html" class="list-group-item list-group-item-action">
+                        Feminino
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Crianças
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Lançamentos
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Ofertas
+                    </a>
+                </div>
+
+            </div>
+
+            <div>
+
+                <form>
+                    <div class="form-group">
+                        <li><h4>Formulario de cadastro para compras</h4></li>
+                        <label class="col-form-label" for="formGroupExampleInput">Nome Completo</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Digite seu nome completo">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="formGroupExampleInput2">CPF</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite seu CPF">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="formGroupExampleInput2">RG</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite seu RG">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="formGroupExampleInput2">Endereço</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite seu endereço">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-form-label" for="formGroupExampleInput2">Cidade</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite sua Cidade">
+                        <div class="form-row align-items-center">
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div class="col-auto">
+                                <label class="mr-sm-2" for="inlineFormCustomSelect">Estado</label>
+                                <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                                    <option selected>Escolha seu Estado (UF)</option>
+                                    <option value="Acre">Acre</option>
+                                    <option value="Alagoas">Alagoas</option>
+                                    <option value="Amapá">Amapá</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Bahia">Bahia</option>
+                                    <option value="Ceará">Ceará</option>
+                                    <option value="Distrito Federal">Distrito Federal</option>
+                                    <option value="Espírito Santo">Espírito Santo</option>
+                                    <option value="Goiás">Goiás</option>
+                                    <option value="Maranhão">Maranhão</option>
+                                    <option value="Mato Grosso">Mato Grosso</option>
+                                    <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                                    <option value="Minas Gerais">Minas Gerais</option>
+                                    <option value="Pará">Pará</option>
+                                    <option value="Paraíba">Paraíba</option>
+                                    <option value="Paraná">Paraná</option>
+                                    <option value="Pernambuco">Pernambuco</option>
+                                    <option value="Piauí">Piauí</option>
+                                    <option value="Rio de Janeiro">Rio de Janeiro</option>
+                                    <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                                    <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                                    <option value="Rondônia">Rondônia</option>
+                                    <option value="Roraima">Roraima</option>
+                                    <option value="Santa Catarina">Santa Catarina</option>
+                                    <option value="São Paulo">São Paulo</option>
+                                    <option value="Sergipe">Sergipe</option>
+                                    <option value="Tocantins">Tocantins</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-form-label" for="formGroupExampleInput2">Bairro</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Digite seu bairro">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label" for="formGroupExampleInput2">CEP</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="00-000-0000">
+                        </div>
+                        
+
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<br/>
+
+<div class="row">
+
+    <div class="col-md">
+        <ul class="list-unstyled">
+            <li><h4>Central de Relacionamentos</h4></li>
+            <li>Em Caso de Duvidas</li>
+            <li>entre em contato conosco</li>
+            <li>0800 70 70 70</li>
+        </ul>
+    </div>
+
+    <div class="col-md">
+        <ul class="list-unstyled">
+            <li><h4>Pagamentos</h4></li>
+            <li>Divida suas compras</li>
+            <li>em até 10x nos Cartões sem juros.</li>
+            <li>Facilidades para sua compra.</li>
+        </ul>
+    </div>
+
+    <div class="col-md">
+
+        <h5>Formas de pagamento</h5>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_visa.png" title="Visa" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_master.png" title="MasterCard" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_american.png" title="American Express" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_diners.png" title="Diners Club" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_hiper.png" title="Hipercard" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_elo.png" title="Elo" border="0">
+            </li>                   </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<br/>
+
+<div class="row bg-secondary text-white">
+    <div class="col-md text-center">
+        ShoesNet® 2017-2018 - By: Caio Oliveira
+    </div>
+</div>
+
+
+</div>
+
+</body>
+
+</html>
