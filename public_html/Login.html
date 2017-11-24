@@ -1,100 +1,215 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <title>TODO supply a title</title>
+<html>
+
+    <head>
+        <title>ShoesNet</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/png" href="http://entec.ifpr.edu.br/wp-content/uploads/2016/09/cropped-ifpr.png">
-    </head>
-    <body>
+
+        <script src="js/jquery-3.2.1.js"></script>
+
+        <script src="js/popper.js"></script>
+
+        <script src="js/bootstrap.js"></script>
+
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+
+        <link rel="stylesheet" href="css/personalizado.css" type="text/css" />    
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <style>
-            /* 
-            seletor {
-                    propriedade: valor;
+            .card{
+                margin-right: 20px;
+                margin-bottom: 20px;
             }
-            
-            Como formatar as tags:
-            tag{...}
-            .classe{...} --> basta utilizar a propriedade class="nome" nas tags
-            #id{...} --> para formatar algo com ID �nico
-            
-            */
-            body {
-                /* Define um fundo, pode ser uma imagem ou cor */
-                background: #dddddd;
-                /* Tipo da fonte */
-                font-family: Calibri;
-                /* Cor da fonte */
-                color: #333333;
+
+            .card img{
+                height: 200px;
+
             }
-            .titulo{
-                /* Tamanho da font */
-                font-size: 12pt;
-                /* Negrito ou n�o */
-                font-weight: bold;
-            }
-            .botao{
-                background: #2494FF;
-                color: #FFFFFF;
-                padding: 10px 20px;
-                border: none;
-            }
-            .campo{
-                border-left-color: #AAAAAA;
-                border-width: 0px 0px 0px 5px;              
-                background: #FFFFFF;
-                padding: 10px 3px;
-            }
-            h2{
-                border-left-color: #2494FF;
-                border-left-width: 5px;
-                border-left-style: solid;
-                padding-left: 5px;
-                
-                border-bottom-color: #2494FF;
-                border-bottom-width: 1px;
-                border-bottom-style: solid;
-            }
-            #conteudo{
-                background: #EEEEEE;
-                border-color: #AAAAAA;
-                border-style: solid;
-                border-width: 1px;
-                
-                width: 500px;
-                margin: 10px auto;
-                padding: 15px;
-            }
-            
-            .center{
-                text-align: center;
-            }
+
         </style>
+    </head>
 
-        <div id="conteudo">
+    <body>
 
-            <h2>Conectar em minha conta</h2>
+        <div class="container-fluid">
 
-            <form action="" method="GET">
+            <div class="row">
 
-                <label class="titulo">Login:</label><br>
-                <input class="campo" name="login" placeholder="seu@email.com" type="email">
-                <br><br>
+                <div class="col">
 
-                <label class="titulo">Senha:</label><br>
-                <input class="campo" name="senha" placeholder="Informe a senha" type="password">
-                <br><br>
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="navbar-brand" href="index.html">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            Inicio</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
 
-                <br>
-                <div class="center">
-                    <input value="Entrar" class="botao" type="submit">
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="mulher.html">
+                                        <i class="fa fa-female" aria-hidden="true"></i>
+                                        Mulher<span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="homem.html">
+                                        <i class="fa fa-male" aria-hidden="true"></i>
+                                        Homem</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="#">
+                                        <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+                                        Lancamentos</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        Carrinho de Compra
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="cadastro.html">
+                                            <i class="fa fa-sign-out" aria-hidden="true"></i>Cadastro</a>
+                                        <a class="dropdown-item" href="Login.html">
+                                            <i class="fa fa-share-square" aria-hidden="true"></i>Conectar em Minha Conta</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa fa-money" aria-hidden="true"></i>Finalizar Compra</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    Pesquisar</button>
+                            </form>
+                        </div>
+                    </nav>
+
+
                 </div>
 
-            </form>
+            </div>
 
         </div>
+        <br/>
 
-    
+        <div class="row">
 
-</body></html>
+
+            <div class="col-md-3">
+
+                <div class="list-group">
+                    <a href="homem.html" class="list-group-item list-group-item-action">
+                        Masculino
+                    </a>
+                    <a href="mulher.html" class="list-group-item list-group-item-action">
+                        Feminino
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Crianças
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Lançamentos
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">
+                        Ofertas
+                    </a>
+                </div>
+
+            </div>
+
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">E-mail</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">Digite seu E-mail para acesso</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Senha</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input">
+                            Lembrar-me
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Conectar</button>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<br/>
+
+<div class="row">
+
+    <div class="col-md">
+        <ul class="list-unstyled">
+            <li><h4>Central de Relacionamentos</h4></li>
+            <li>Em Caso de Duvidas</li>
+            <li>entre em contato conosco</li>
+            <li>0800 70 70 70</li>
+        </ul>
+    </div>
+
+    <div class="col-md">
+        <ul class="list-unstyled">
+            <li><h4>Pagamentos</h4></li>
+            <li>Divida suas compras</li>
+            <li>em até 10x nos Cartões sem juros.</li>
+            <li>Facilidades para sua compra.</li>
+        </ul>
+    </div>
+
+    <div class="col-md">
+
+        <h5>Formas de pagamento</h5>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_visa.png" title="Visa" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_master.png" title="MasterCard" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_american.png" title="American Express" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_diners.png" title="Diners Club" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_hiper.png" title="Hipercard" border="0">
+            </li>
+            <li class="list-inline-item">
+                <img src="https://static.kabum.com.br/conteudo/temas/001/imagens/rodape/band_elo.png" title="Elo" border="0">
+            </li>                   </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<br/>
+
+<div class="row bg-secondary text-white">
+    <div class="col-md text-center">
+        ShoesNet® 2017-2018 - By: Caio Oliveira
+    </div>
+</div>
+
+
+</div>
+
+</body>
+
+</html>
